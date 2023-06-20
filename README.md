@@ -22,3 +22,7 @@ Add it in your root build.gradle at the end of repositories:
 	        implementation 'com.github.madil007:DataCollectionLibrary:Tag'
 	 
 	}
+
+
+ [![](https://jitpack.io/v/madil007/DataCollectionLibrary.svg)](https://jitpack.io/#madil007/DataCollectionLibrary)
+
