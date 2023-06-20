@@ -1,9 +1,11 @@
 package com.chatgpt.masterclass.datacollectionlibrary
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.chatgpt.masterclass.datacollectionlibrary.databinding.ActivityMainBinding
 import com.chatgpt.masterclass.datacollectionlibrary.utils.*
+import com.data.collection.library.Toaster
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         // binding.root returns the root layout,
         // which is activity_main.xml file itself
         setContentView(binding.root)
+        Toaster.simpleToast(this, "This is data Collection Library")
+
 
         // set current timestamp
         binding.timeStampTv.text = getTimeStamp()
