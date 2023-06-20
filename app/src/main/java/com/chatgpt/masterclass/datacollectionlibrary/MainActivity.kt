@@ -1,16 +1,15 @@
 package com.chatgpt.masterclass.datacollectionlibrary
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.chatgpt.masterclass.datacollectionlibrary.databinding.ActivityMainBinding
-import com.chatgpt.masterclass.datacollectionlibrary.utils.*
 import com.data.collection.library.Toaster
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // as we have only one layout activity_main.xml
@@ -20,29 +19,27 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         Toaster.simpleToast(this, "This is data Collection Library")
 
-
         // set current timestamp
-        binding.timeStampTv.text = getTimeStamp()
+        binding.timeStampTv.text = Toaster.getTimeStamp()
 
         // set device name
-        val deviceName = getDeviceName()
+        val deviceName = Toaster.getDeviceName()
         binding.deviceNameTv.text = deviceName
 
         // set Os Version
-        val androidOSVersion = getAndroidOSVersion()
+        val androidOSVersion = Toaster.getAndroidOSVersion()
         binding.versionOsTv.text = androidOSVersion
 
 
         // build version
-        val buildVersion = getBuildVersion()
+        val buildVersion = Toaster.getBuildVersion()
         binding.buildVersionTv.text = buildVersion.toString()
 
         // cpu clock speed
-        val cpuClockSpeed = getCpuClockSpeed()
+        val cpuClockSpeed = Toaster.getCpuClockSpeed()
         binding.cpuClockSPeedTv.text = cpuClockSpeed
         // set manufecturer name
-        binding.manufacturerNameTv.text = getManufacturerName()
-
+        binding.manufacturerNameTv.text = Toaster.getManufacturerName()
 
     }
 }
