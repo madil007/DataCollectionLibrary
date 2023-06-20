@@ -9,7 +9,7 @@ import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
 
-object Toaster {
+object DataCollection {
      fun simpleToast(context: Context, message:String){
         Toast.makeText(context, "This is simple toast", Toast.LENGTH_SHORT).show()
     }
