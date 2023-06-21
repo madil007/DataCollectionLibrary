@@ -10,6 +10,7 @@ import java.io.File
 import java.io.FileReader
 
 object DataCollection {
+
      fun simpleToast(context: Context, message:String){
         Toast.makeText(context, "This is simple toast", Toast.LENGTH_SHORT).show()
     }
@@ -23,9 +24,7 @@ object DataCollection {
          return timeStamp.toString()
      }
 
-
      // get device name
-
      fun getDeviceName(): String {
          val manufacturer = Build.MANUFACTURER
          val model = Build.MODEL
@@ -37,7 +36,6 @@ object DataCollection {
      }
 
      // get the company name who manufacture the device
-
      fun getManufacturerName(): String {
          return Build.MANUFACTURER
      }
@@ -46,14 +44,13 @@ object DataCollection {
      fun getAndroidOSVersion(): String {
          return Build.VERSION.RELEASE
      }
-
      // get build version
      fun getBuildVersion(): Int {
          return Build.VERSION.SDK_INT
      }
 
-
      fun getCpuClockSpeed(): String {
+
          try {
              val pid = Process.myPid().toString()
              val cpuInfoFile = File("/proc/$pid/stat")
